@@ -6,6 +6,9 @@ import './styles/styles.scss';
 import { addExpense } from './actions/expenses';
 import { Provider } from 'react-redux';
 const store = configureStore();
+import 'normalize.css';
+import './styles/styles.scss';
+import 'react-dates/lib/css/_datepicker.css';
 
 store.dispatch(addExpense({ description: 'water bill', amount: 4500 }));
 store.dispatch(

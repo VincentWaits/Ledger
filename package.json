@@ -15,7 +15,6 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "jest": "20.0.4",
-    "live-server": "^1.2.1",
     "moment": "2.18.1",
     "node-sass": "npm:sass@^1.43.4",
     "normalize.css": "^8.0.1",
@@ -31,17 +30,20 @@
     "style-loader": "0.18.2",
     "uuid": "3.1.0",
     "validator": "^13.7.0",
-    "webpack": "3.1.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack": "3.1.0"
   },
   "scripts": {
     "heroku-postbuild": "yarn run build:prod",
     "start": "node server/server.js",
-    "serve": "live-server public/",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "build:prod": "webpack -p --env production",
     "build:dev": "webpack",
     "dev-server": "webpack-dev-server",
     "test": "jest"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "webpack-dev-server": "^2.5.1"
+
   }
 }

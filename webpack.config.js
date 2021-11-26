@@ -10,7 +10,7 @@ module.exports = (env) => {
     entry: './src/app.js',
     // entry: './src/playground/hoc.js',
     output: {
-      path: path.join(__dirname, 'public'), //Absolute path to where to output the file
+      path: path.join(__dirname, 'public', 'dist'), //Absolute path to where to output the file
       filename: 'bundle.js',
     },
     module: {
@@ -42,6 +42,7 @@ module.exports = (env) => {
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true,
+      publicPath: '/dist/',
     },
   };
 };
